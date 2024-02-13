@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Boxing Data</h1>
+            <p>Find your favorite boxer and his record.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Get Started</a>
+                <a href="#" class="btn btn-secondary">Learn More</a>
+            </div>
+            <div id="fighters-data">
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const dataContainer = document.getElementById('fighters-data');
+        fetch('/famous_fighters.json')
+            .then(response => response.json())
+
+            .then(data => {
+                data.fighters.forEach(fighter => {
+                    const fighterElement = document.createElement('div');
+                    fighterElement.innerHTML = `<h3>${fighter.name}</h3><p>Record: ${fighter.record}</p>`;
+                    dataContainer.appendChild(fighterElement);
+                });
+            })
+            .catch(error => console.error('Error fetching the fighters data:', error));
+    });
+</script>
+</html>

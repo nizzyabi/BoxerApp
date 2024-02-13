@@ -1,0 +1,36 @@
+{
+    "fighters": [
+        {
+            "name": "Muhammad Ali",
+            "record": "56W-5L (37 KO)"
+        },
+        {
+            "name": "Mike Tyson",
+            "record": "50W-6L (44 KO)"
+        },
+        {
+            "name": "Floyd Mayweather",
+            "record": "50W-0L (27 KO)"
+        },
+        {
+            "name": "Manny Pacquiao",
+            "record": "62W-7L-2D (39 KO)"
+        },
+        {
+            "name": "Conor McGregor",
+            "record": "22W-6L (19 KO) in MMA"
+        },
+        {
+            "name": "Khabib Nurmagomedov",
+            "record": "29W-0L (8 KO) in MMA"
+        },
+        {
+            "name": "Anderson Silva",
+            "record": "34W-11L (1 NC) (23 KO) in MMA"
+        },
+        {
+            "name": "Georges St-Pierre",
+            "record": "26W-2L (8 KO) in MMA"
+        }
+    ]
+}
